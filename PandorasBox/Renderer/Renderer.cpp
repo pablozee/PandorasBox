@@ -5,10 +5,14 @@ Renderer::Renderer()
 
 }
 
+Renderer::~Renderer()
+{
+	Shutdown();
+}
 
 void Renderer::Initialize(HWND hwnd)
 {
-
+	m_Hwnd = hwnd;
 }
 
 void Renderer::Update()
@@ -17,6 +21,16 @@ void Renderer::Update()
 }
 
 void Renderer::Draw()
+{
+
+}
+
+void Renderer::InitializeDirect3D()
+{
+
+}
+
+void Renderer::Shutdown()
 {
 
 }

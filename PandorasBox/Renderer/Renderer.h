@@ -11,6 +11,12 @@ public:
 	void Update();
 	void Draw();
 
+	HWND GetHwnd() const { return m_Hwnd; }
+
 private:
 	void InitializeDirect3D();
+
+	void Shutdown();
+
+	HWND m_Hwnd;
 };

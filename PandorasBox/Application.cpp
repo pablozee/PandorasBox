@@ -63,6 +63,12 @@ void Application::CalculateFrameStatistics()
 		std::wstring fpsStr = std::to_wstring(fps);
 		std::wstring mspfStr = std::to_wstring(mspf);
 
+		std::wstring windowText = m_MainWindowCaption +
+			L"    fps: " + fpsStr +
+			L"   mspf: " + mspfStr;
+
+		SetWindowText(m_Window->GetRenderer()->GetHwnd(), windowText.c_str());
+
 		frameCnt = 0;
 		timeElapsed += 1.0f;
 	}
