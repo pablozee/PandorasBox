@@ -49,6 +49,7 @@ public:
 
 	inline unsigned int GetWidth() const { return m_Data.Width; }
 	inline unsigned int GetHeight() const { return m_Data.Height; }
+	inline HWND GetHwnd() const { return m_Hwnd; }
 
 	inline void SetEventCallback(const EventCallbackFn& callback) { m_Data.EventCallback = callback; }
 	void SetVSync(bool enabled);
@@ -74,14 +75,15 @@ private:
 	static LRESULT CALLBACK HandleMessageThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 	LRESULT HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
+
 public:
 	Input input;
+
 
 private:
 	void* m_Window;
 
 	WindowData m_Data;
-
+	
 	HWND m_Hwnd;
-
 };

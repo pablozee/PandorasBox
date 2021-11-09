@@ -1,5 +1,6 @@
 #include "Application.h"
 #include <assert.h>
+#include <Windows.h>
 
 #define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 
@@ -28,6 +29,8 @@ void Application::OnEvent(Event& event)
 
 int Application::Run()
 {
+	m_Timer.Reset();
+
 	while (m_Running)
 	{
 		if (const auto ecode = Window::ProcessMessages())
@@ -36,9 +39,31 @@ int Application::Run()
 		}
 
 		m_Timer.Tick();
+
+		CalculateFrameStatistics();
 	}
 
 	return 0;
+}
+
+void Application::CalculateFrameStatistics()
+{
+	static int frameCnt = 0;
+	static float timeElapsed = 0.0f;
+
+	frameCnt++;
+
+	if ((m_Timer.TotalTime() - timeElapsed) >= 1.0f)
+	{
+		float fps = (float)frameCnt; // fps = frameCnt / 1
+		float mspf = 1000.0f / fps;
+
+		std::wstring fpsStr = std::to_wstring(fps);
+		std::wstring mspfStr = std::to_wstring(mspf);
+
+		frameCnt = 0;
+		timeElapsed += 1.0f;
+	}
 }
 
 bool Application::OnWindowClose(WindowCloseEvent& event)
