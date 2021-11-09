@@ -150,15 +150,22 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Events\KeyEvent.h" />
     <ClInclude Include="Events\MouseEvent.h" />
+    <ClInclude Include="Renderer\D3dStructures.h" />
     <ClInclude Include="Renderer\d3dx12.h" />
+    <ClInclude Include="Renderer\Device.h" />
+    <ClInclude Include="Renderer\Fence.h" />
     <ClInclude Include="Renderer\Renderer.h" />
+    <ClInclude Include="Renderer\RendererHelpers.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="GameTimer.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Renderer\Device.cpp" />
+    <ClCompile Include="Renderer\Fence.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
+    <ClCompile Include="Renderer\RendererHelpers.cpp" />
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>

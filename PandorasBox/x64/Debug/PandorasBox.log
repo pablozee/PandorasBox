@@ -1,5 +1,4 @@
-﻿  Renderer.cpp
-  WinMain.cpp
-  Window.cpp
+﻿  Fence.cpp
+  Renderer.cpp
   Generating Code...
   PandorasBox.vcxproj -> C:\dev\PandorasBox\x64\Debug\PandorasBox.exe

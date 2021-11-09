@@ -1,5 +1,6 @@
 #pragma once
 #include <Windows.h>
+#include "D3dStructures.h"
 
 class Renderer
 {
@@ -19,4 +20,6 @@ private:
 	void Shutdown();
 
 	HWND m_Hwnd;
+
+	D3D12Global d3d;
 };
