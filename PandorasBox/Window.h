@@ -3,6 +3,7 @@
 #include <optional>
 #include "Events/Event.h"
 #include "Input.h"
+#include "Renderer/Renderer.h"
 
 struct WindowProps
 {
@@ -50,6 +51,7 @@ public:
 	inline unsigned int GetWidth() const { return m_Data.Width; }
 	inline unsigned int GetHeight() const { return m_Data.Height; }
 	inline HWND GetHwnd() const { return m_Hwnd; }
+	inline Renderer* GetRenderer() const { return m_Renderer; }
 
 	inline void SetEventCallback(const EventCallbackFn& callback) { m_Data.EventCallback = callback; }
 	void SetVSync(bool enabled);
@@ -79,6 +81,7 @@ private:
 public:
 	Input input;
 
+	Renderer* m_Renderer;
 
 private:
 	void* m_Window;

@@ -79,6 +79,11 @@ void Window::Init(const WindowProps& props)
 	HCURSOR cursor = LoadCursor(0, IDC_ARROW);
 	SetCursor(cursor);
 
+	auto memory = (Renderer*)malloc(sizeof(Renderer));
+	m_Renderer = new (memory) Renderer();
+	m_Renderer->Initialize(m_Hwnd);
+
+
 	SetVSync(true);
 }
 

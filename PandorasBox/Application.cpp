@@ -41,6 +41,8 @@ int Application::Run()
 		m_Timer.Tick();
 
 		CalculateFrameStatistics();
+		m_Window->GetRenderer()->Update();
+		m_Window->GetRenderer()->Draw();
 	}
 
 	return 0;
