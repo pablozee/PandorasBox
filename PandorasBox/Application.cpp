@@ -34,6 +34,8 @@ int Application::Run()
 		{
 			return *ecode;
 		}
+
+		m_Timer.Tick();
 	}
 
 	return 0;

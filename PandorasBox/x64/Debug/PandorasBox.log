@@ -1,1 +1,5 @@
-﻿  PandorasBox.vcxproj -> C:\dev\PandorasBox\x64\Debug\PandorasBox.exe
+﻿  Application.cpp
+  GameTimer.cpp
+  WinMain.cpp
+  Generating Code...
+  PandorasBox.vcxproj -> C:\dev\PandorasBox\x64\Debug\PandorasBox.exe

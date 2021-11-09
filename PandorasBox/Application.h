@@ -2,6 +2,7 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 #include "Window.h"
+#include "GameTimer.h"
 
 
 class Application
@@ -26,4 +27,6 @@ private:
 
 	std::unique_ptr<Window> m_Window;
 	static Application* s_Instance;
+
+	GameTimer m_Timer;
 };
